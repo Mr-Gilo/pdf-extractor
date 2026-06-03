@@ -1,6 +1,9 @@
+import os
 import ollama
 import json
 import re
+
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
 def clean_json_response(raw: str) -> str:
     """
@@ -62,7 +65,8 @@ Only extract what is explicitly stated.
 Document text:
 {text}"""
 
-    response = ollama.chat(
+    client = ollama.Client(host=OLLAMA_HOST)
+    response = client.chat(
         model=model,
         messages=[{"role": "user", "content": prompt}],
         options={

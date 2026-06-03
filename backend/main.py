@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pdf_parser import extract_text_from_pdf
 from extractor import extract_information
 import uvicorn
+import os
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
 app = FastAPI(
     title="PDF Information Extractor API",

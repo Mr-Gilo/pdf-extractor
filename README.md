@@ -120,7 +120,7 @@ Frontend runs at http://localhost:8501
 - [x] Local LLM integration via Ollama
 - [x] FastAPI REST backend
 - [x] Streamlit frontend
-- [ ] Docker containerisation
+- [x] Docker containerisation
 - [ ] RAG pipeline for document querying
 - [ ] Multi-document batch processing
 - [ ] React/Next.js frontend
