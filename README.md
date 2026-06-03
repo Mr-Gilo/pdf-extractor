@@ -13,6 +13,7 @@ All processing happens on your machine — no data leaves your device.
 PDF Upload → PyMuPDF (text extraction) → FastAPI → Ollama (llama3.2) → Structured JSON
 
 ↑
+
 Streamlit UI
 
 ## Features
