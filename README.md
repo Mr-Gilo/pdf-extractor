@@ -121,9 +121,6 @@ Frontend runs at http://localhost:8501
 - [x] FastAPI REST backend
 - [x] Streamlit frontend
 - [x] Docker containerisation
-- [ ] RAG pipeline for document querying
-- [ ] Multi-document batch processing
-- [ ] React/Next.js frontend
 
 ## Use Case
 
