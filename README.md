@@ -18,7 +18,7 @@ Streamlit UI
 
 ## Features
 
-- Local LLM inference via Ollama — no API keys, no cloud dependency
+- Local LLM inference via Ollama - no API keys, no cloud dependency
 - PDF text extraction via PyMuPDF
 - Structured JSON output via custom prompt engineering
 - REST API via FastAPI with Swagger documentation at /docs
@@ -61,12 +61,12 @@ pip install -r requirements.txt
 
 ## Running the Application
 
-**Terminal 1 — Start Ollama:**
+**Terminal 1 - Start Ollama:**
 ```bash
 ollama serve
 ```
 
-**Terminal 2 — Start the backend:**
+**Terminal 2 - Start the backend:**
 ```bash
 conda activate pdf-extractor
 cd backend
@@ -75,7 +75,7 @@ python main.py
 Backend runs at http://localhost:8000
 API documentation at http://localhost:8000/docs
 
-**Terminal 3 — Start the frontend:**
+**Terminal 3 - Start the frontend:**
 ```bash
 conda activate pdf-extractor
 streamlit run app.py
@@ -127,5 +127,4 @@ Frontend runs at http://localhost:8501
 
 ## Use Case
 
-Originally designed for motor insurance and legal document analysis (court pack processing),
-this tool is domain-agnostic and can extract structured information from any text-based PDF.
+This tool is designed to be domain-agnostic and can extract structured information from any text-based PDF for document analysis
