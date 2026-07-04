@@ -1,7 +1,7 @@
 # PDF Information Extractor
 
 A locally hosted AI tool that extracts structured information from PDF documents.
-All processing happens on your machine — no data leaves your device.
+All processing happens on your machine - no data leaves your device.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.111-green)
@@ -124,4 +124,4 @@ Frontend runs at http://localhost:8501
 
 ## Use Case
 
-This tool is designed to be domain-agnostic and can extract structured information from any text-based PDF for document analysis
+This tool is designed to be domain-agnostic and can extract structured information from any PDF for document analysis
