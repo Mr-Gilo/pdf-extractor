@@ -42,7 +42,7 @@ async def extract_from_pdf(file: UploadFile = File(...)):
     """
     Upload a PDF and receive structured JSON extraction.
     Scanned and image-based PDFs are handled automatically via OCR.
-    All processing happens locally — no data leaves the machine.
+    All processing happens locally - no data leaves the machine.
     """
     if not file.filename.lower().endswith(".pdf"):
         raise HTTPException(

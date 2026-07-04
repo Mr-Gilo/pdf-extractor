@@ -33,12 +33,12 @@ pytesseract.pytesseract.tesseract_cmd = _find_tesseract()
 # Pages with fewer characters than this are treated as scanned
 MIN_CHARS = 50
 
-# DPI for rendering scanned pages — 300 gives reliable OCR accuracy
+# DPI for rendering scanned pages - 300 gives reliable OCR accuracy
 RENDER_DPI = 300
 
 
 def _render_page(page: fitz.Page) -> Image.Image:
-    """Render a PDF page to a PIL Image using PyMuPDF — no poppler needed."""
+    """Render a PDF page to a PIL Image using PyMuPDF - no poppler needed."""
     zoom = RENDER_DPI / 72
     mat = fitz.Matrix(zoom, zoom)
     pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
@@ -81,7 +81,7 @@ def extract_text_from_pdf(file_bytes: bytes) -> dict:
             all_text.append(label + native)
             page_methods.append("native")
         else:
-            # Scanned page — try OCR
+            # Scanned page - try OCR
             try:
                 ocr_text = _ocr_page(page)
                 if ocr_text:
@@ -92,7 +92,7 @@ def extract_text_from_pdf(file_bytes: bytes) -> dict:
                     page_methods.append("ocr_empty")
                 pages_ocr += 1
             except Exception as e:
-                # OCR failed — include native text (even if sparse)
+                # OCR failed - include native text (even if sparse)
                 all_text.append(label + native + f"\n[OCR failed: {str(e)[:80]}]")
                 page_methods.append("ocr_failed")
                 pages_ocr += 1
